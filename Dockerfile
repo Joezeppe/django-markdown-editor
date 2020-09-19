@@ -27,6 +27,7 @@ EXPOSE 8020
 
 STOPSIGNAL SIGTERM
 
+
 CMD ["/opt/app/start-server.sh"]
 
 
