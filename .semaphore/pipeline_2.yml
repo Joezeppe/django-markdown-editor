@@ -11,9 +11,9 @@ blocks:
         - name: Build
           commands:
             - docker login --username samchaffy --password Codelife2025
-            - 'docker pull $DOCKER_USERNAME/django-markdown-editor:latest || true'
-            - 'docker build --cache-from=$DOCKER_USERNAME/django-markdown-editor:latest -t $DOCKER_USERNAME/django-markdown-editor:latest .'
-            - 'docker push $DOCKER_USERNAME/django-markdown-editor:latest'
+            - 'docker pull samchaffy/django-markdown-editor:latest || true'
+            - 'docker build --cache-from=samchaffy/django-markdown-editor:latest -t $DOCKER_USERNAME/django-markdown-editor:latest .'
+            - 'docker push samchaffy/django-markdown-editor:latest'
       prologue:
         commands:
           - sem-version python 3.7
