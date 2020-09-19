@@ -12,7 +12,7 @@ blocks:
           commands:
             - docker login --username samchaffy --password Codelife2025
             - 'docker pull samchaffy/django-markdown-editor:latest || true'
-            - 'docker build --cache-from=samchaffy/django-markdown-editor:latest -t $DOCKER_USERNAME/django-markdown-editor:latest .'
+            - 'docker build --cache-from=samchaffy/django-markdown-editor:latest -t samchaffy/django-markdown-editor:latest .'
             - 'docker push samchaffy/django-markdown-editor:latest'
       prologue:
         commands:
