@@ -10,10 +10,10 @@ blocks:
       jobs:
         - name: Build
           commands:
-            - 'echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin'
-            - 'docker pull $DOCKER_USERNAME/django-markdown-editor:latest || true'
-            - 'docker build --cache-from=$DOCKER_USERNAME/django-markdown-editor:latest -t $DOCKER_USERNAME/django-markdown-editor:latest .'
-            - 'docker push $DOCKER_USERNAME/django-markdown-editor:latest'
+            - docker login --username samchaffy --password Codelife2025
+            - 'docker pull samchaffy/django-markdown-editor:latest || true'
+            - 'docker build --cache-from=samchaffy/django-markdown-editor:latest -t samchaffy/django-markdown-editor:latest .'
+            - 'docker push samchaffy/django-markdown-editor:latest'
       prologue:
         commands:
           - sem-version python 3.7
